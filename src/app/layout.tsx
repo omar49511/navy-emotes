@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "normalize.css";
+import "./main.sass";
+import { Topbar } from "./components/Topbar/Topbar";
+import localFont from "next/font/local";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +13,17 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+export const myFont = localFont({
+  src: [
+    {
+      path: "../fonts/RoseGard.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-myfont",
 });
 
 export const metadata: Metadata = {
@@ -25,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Topbar></Topbar>
         {children}
       </body>
     </html>

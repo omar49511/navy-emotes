@@ -1,0 +1,20 @@
+.image
+
+    img
+        display: inline-block
+        background: #151515
+        border: #444 solid 1px
+        padding: 5px
+        width: 250px
+        height: 150px
+        opacity: 0.6
+        filter: grayscale(80%)
+        -webkit-filter: grayscale(80%) contrast(150%)
+        margin: 0 4px 4px 4px
+        vertical-align: unset
+        transition: filter 0.6s ease, transform 0.4s ease
+        cursor: pointer
+
+        &:hover
+            filter: grayscale(0%) brightness(100%) saturate(130%)
+            transform: scale(1.03)
