@@ -1,4 +1,5 @@
-import {Button} from './components/ui/Button/Button'
+import { Button } from './components/ui/Button/Button'
+import { Card } from './components/ui/Card/Card';
 
 export default function Home() {
   return <div style={
@@ -9,7 +10,7 @@ export default function Home() {
       alignItems: 'center'
     }
   }>
-  <Button href='https://www.twitch.tv/skyshocktv'>Combat</Button>
-  
+    <Button href='https://www.twitch.tv/skyshocktv'>Combat</Button>
+    <Card title='Titulo' content='lorem ipsum' position='left'></Card>
   </div>;
 }
